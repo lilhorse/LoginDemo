@@ -18,4 +18,9 @@ class Account extends BaseModel implements AuthenticatableContract,
     use Authenticatable, Authorizable, CanResetPassword;
 
     protected $visible = ['id', 'avatar', 'nickname', 'token'];
+
+    public function getAvatarAttribute($value)
+    {
+        return $this->getImageAttribute($value);
+    }
 }
