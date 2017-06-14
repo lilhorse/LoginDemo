@@ -19,7 +19,7 @@ $factory->define(App\Models\Api\Account::class, function (Faker\Generator $faker
         'email' => $faker->safeEmail,
         'open_id' => str_random(15),
         'register_way' => rand(0, 4),
-        'password' => Hash::make(str_random(10)),
+        'password' => md5('123456'),
         'token' => str_random(15),
         'nickname' => $faker->name,
         'avatar' => $faker->imageUrl(200, 200)

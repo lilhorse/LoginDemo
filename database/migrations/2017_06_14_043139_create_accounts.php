@@ -19,11 +19,17 @@ class CreateAccounts extends Migration
             $table->string('password')->nullable();
             $table->string('open_id')->nullable();
             $table->string('token')->nullable();
+            $table->string('remember_token')->nullable();
             $table->tinyInteger('register_way')->default(0);//0-微信，1-qq，2-微博，3-手机，4-邮箱
             $table->string('nickname', 50)->nullable();
             $table->string('avatar')->nullable();
             $table->tinyInteger('sex')->default(0);//0-未知，1-男，2-女
             $table->tinyInteger('status')->default(0);
+            $table->string('last_ip', 15)->nullable();
+            $table->timestamp('last_time')->nullable();
+            $table->string('register_channel', 45)->nullable();
+            $table->string('register_version', 45)->nullable();
+            $table->string('register_platform', 45)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

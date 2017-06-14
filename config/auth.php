@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'driver' => 'eloquent',
+//    'driver' => 'eloquent',
 
     /*
     |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'model' => App\User::class,
+//    'model' => App\User::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ return [
     |
     */
 
-    'table' => 'users',
+//    'table' => 'users',
 
     /*
     |--------------------------------------------------------------------------
@@ -57,6 +57,17 @@ return [
     | they have less time to be guessed. You may change this as needed.
     |
     */
+
+    'multi-auth' => [
+        'admin' => [
+            'driver' => 'eloquent',
+            'model'  => Loopeer\QuickCms\Models\Backend\User::class,
+        ],
+        'user' => [
+            'driver' => 'eloquent',
+            'model'  => App\Models\Api\Account::class
+        ]
+    ],
 
     'password' => [
         'email'  => 'emails.password',
