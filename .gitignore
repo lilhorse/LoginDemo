@@ -1,0 +1,13 @@
+/vendor
+/node_modules
+Homestead.yaml
+Homestead.json
+.env
+.idea/
+/storage/logs/laravel.log
+/public/loopeer/
+/public/laravel-u-editor
+/public/php_errors.log
+/public/uploads/
+composer.phar
+composer.lock
